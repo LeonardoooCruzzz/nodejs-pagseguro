@@ -2,4 +2,4 @@
 Estrutura desenvolvida seguindo a linguagem de programação Node.js, com integração ao PagSeguro.
 Toda integração ao PagSeguro foi feita no ambiente de teste, caso queira em produção, basta trocar as URLs
 
-<img src="https://github.com/LeonardoooCruzzz/nodejs-pagseguro/blob/master/lib/assets/images/apresentacao.gif" alt="Apresentação" style="max-width:100%;">
+<img src="https://github.com/LeonardoooCruzzz/nodejs-pagseguro/blob/master/public/images/apresentacao.gif" alt="Apresentação" style="max-width:100%;">
