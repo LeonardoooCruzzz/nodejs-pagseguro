@@ -1,0 +1,93 @@
+@use 'fonts';
+
+//font Padão
+$fontPadrao:  'Montserrat-Regular';
+$corPadrao: #A6341B;
+%formato-fonts {
+  font-family: $fontPadrao;
+  font-size: 14px;
+  color: #00323F;
+}
+%box-shadow {
+  box-shadow: 0 0 0 0.2rem rgb(0,112,108,.25)!important
+}
+@mixin positionCenter() {
+  display:flex;
+  flex-flow:column;
+  justify-content:center;
+  align-content:center;
+}
+body {
+  background-color: #fbf7ee;
+}
+div.info-conteudo{
+  position: relative;
+  height: 100vh;
+  @include positionCenter;
+  .loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(255,255,255,.6);
+    @include positionCenter;
+    display: none;
+  }
+  .loading.ativo{display: flex;}
+  .loading::before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    background-image: url(../images/loading.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+h1 {
+  font-family: $fontPadrao;
+  font-weight: bold;
+  font-size: 30px;
+  color: $corPadrao;
+  margin: 0px 0 40px;
+  text-align: center;
+}
+.texto{
+  font-family: $fontPadrao;
+  font-size: 16px;
+  font-weight: 600;
+  color: #00323F;
+  margin-bottom: 15px;
+}
+form {
+  label{
+    @extend %formato-fonts;
+    font-weight: 600;
+    margin: 10px 0 3px;
+  }
+  input.form-control {
+    @extend %formato-fonts;
+    border: solid 1px $corPadrao;
+  }
+  input.form-control:focus{
+    border-color: $corPadrao;
+    box-shadow: 0 0 0 0.2rem rgb(166,52,27,.25)
+  }
+  button.btn-primary{
+    @extend %formato-fonts;
+    color: #fff;
+    font-weight: 600;
+    background-color: #00706C!important;
+    border: none;
+    margin-top: 20px;
+  }
+  button.btn-primary:hover{
+    @extend %box-shadow
+  }
+  button.btn-primary:focus{
+    @extend %box-shadow
+  }
+}

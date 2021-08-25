@@ -1,0 +1,29 @@
+//cabeçalho do site
+include header.pug  
+  div.container
+    div.row.justify-content-center
+      div.col-lg-6
+        h1=tituloLista
+        div.texto.text-center="Preencha o formulário abaixo para fazer a doação."
+        form.formulario(method="post")
+          div.row
+            div.col-lg-12
+              label(for="nome")="*Nome Completo:"
+              input(type="text",id="nome",name="nome",required="required").form-control 
+            div.col-lg-12
+              label(for="email")="*E-mail:"
+              input(type="email",id="email",name="email",required="required").form-control   
+            div.col-lg-6
+              label(for="celular")="*Celular:"
+              input(type="tel",id="celular",name="celular",required="required").form-control  
+            div.col-lg-6
+              label(for="cpf")="*CPF:"  
+              input(type="tel",id="cpf",name="cpf",required="required").form-control
+            div.col-lg-6
+              label(for="valor")="*Digite o valor que deseja doar:"  
+              input(type="text",id="valor",name="valor",required="required").form-control
+            div.col-lg-12.text-center
+              button(type="submit").btn.btn-primary="Fazer a doação"
+   
+  //rodapé do site
+  include footer.pug  

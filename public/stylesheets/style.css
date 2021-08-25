@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("fonts/Montserrat-Regular.eot");
+  src: url("fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/Montserrat-Regular.woff2") format("woff2"), url("fonts/Montserrat-Regular.woff") format("woff"), url("fonts/Montserrat-Regular.ttf") format("truetype"), url("fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+form button.btn-primary, form input.form-control, form label {
+  font-family: "Montserrat-Regular";
+  font-size: 14px;
+  color: #00323F;
+}
+
+form button.btn-primary:focus, form button.btn-primary:hover {
+  box-shadow: 0 0 0 0.2rem rgba(0, 112, 108, 0.25) !important;
+}
+
+body {
+  background-color: #fbf7ee;
+}
+
+div.info-conteudo {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+}
+div.info-conteudo .loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  display: none;
+}
+div.info-conteudo .loading.ativo {
+  display: flex;
+}
+div.info-conteudo .loading::before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  background-image: url(../images/loading.gif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+h1 {
+  font-family: "Montserrat-Regular";
+  font-weight: bold;
+  font-size: 30px;
+  color: #A6341B;
+  margin: 0px 0 40px;
+  text-align: center;
+}
+
+.texto {
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  font-weight: 600;
+  color: #00323F;
+  margin-bottom: 15px;
+}
+
+form label {
+  font-weight: 600;
+  margin: 10px 0 3px;
+}
+form input.form-control {
+  border: solid 1px #A6341B;
+}
+form input.form-control:focus {
+  border-color: #A6341B;
+  box-shadow: 0 0 0 0.2rem rgba(166, 52, 27, 0.25);
+}
+form button.btn-primary {
+  color: #fff;
+  font-weight: 600;
+  background-color: #00706C !important;
+  border: none;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
